@@ -3,63 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar Example</title>
-  <style>
-    .navbar {
-      background: linear-gradient(to right, rgba(128, 128, 128, 0.1), rgba(169, 169, 169, 0.2)); /* Gradient gray */
-      border: 2px solid #800080; /* Purple outline */
-      padding: 10px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-    .navbar .logo {
-      display: flex;
-      align-items: center;
-    }
-    .navbar .logo img {
-      width: 40px;
-      height: 40px;
-      margin-right: 10px;
-    }
-    .navbar .logo span {
-      color: gray;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .navbar .nav-links {
-      display: flex;
-      list-style: none;
-    }
-    .navbar .nav-links li {
-      margin: 0 15px;
-    }
-    .navbar .nav-links a {
-      color: gray;
-      text-decoration: none;
-      font-size: 16px;
-    }
-    .navbar .nav-links a:hover {
-      text-decoration: underline;
-    }
-    .navbar .icons {
-      display: flex;
-      align-items: center;
-    }
-    .navbar .icons img {
-      width: 24px;
-      height: 24px;
-      margin-left: 15px;
-    }
-  </style>
+  <title>PenguinStore</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <nav class="navbar">
     <div class="logo">
       <img src="logo.ico" alt="Logo">
-      <span>ProBoost</span>
+      <span>PenguinStore</span>
     </div>
     <ul class="nav-links">
       <li><a href="#">Home</a></li>
@@ -71,5 +22,15 @@
       <img src="shop.ico" alt="Shop">
     </div>
   </nav>
+  <main>
+    <section class="hero">
+      <h1>Cheapest discord services!</h1>
+      <p>"Buy Smarter, Pay Less."</p>
+      <div class="buttons">
+        <a href="#" class="btn products">Products</a>
+        <a href="#" class="btn discord">Discord</a>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
