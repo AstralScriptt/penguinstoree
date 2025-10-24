@@ -1,1 +1,75 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar Example</title>
+  <style>
+    .navbar {
+      background: linear-gradient(to right, rgba(128, 128, 128, 0.1), rgba(169, 169, 169, 0.2)); /* Gradient gray */
+      border: 2px solid #800080; /* Purple outline */
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+    }
+    .navbar .logo img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+    }
+    .navbar .logo span {
+      color: gray;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .navbar .nav-links {
+      display: flex;
+      list-style: none;
+    }
+    .navbar .nav-links li {
+      margin: 0 15px;
+    }
+    .navbar .nav-links a {
+      color: gray;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .navbar .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .navbar .icons {
+      display: flex;
+      align-items: center;
+    }
+    .navbar .icons img {
+      width: 24px;
+      height: 24px;
+      margin-left: 15px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="logo.ico" alt="Logo">
+      <span>ProBoost</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Status</a></li>
+      <li><a href="#">Feedback</a></li>
+    </ul>
+    <div class="icons">
+      <img src="shop.ico" alt="Shop">
+    </div>
+  </nav>
+</body>
+</html>
