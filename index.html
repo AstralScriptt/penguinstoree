@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PenguinStore</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,16 +23,24 @@
       <img src="shop.ico" alt="Shop">
     </div>
   </nav>
-  <main>
-    <section class="hero">
-      <h1>Cheapest discord services!</h1>
-      <p>"Buy Smarter, Pay Less."</p>
-      <div class="buttons">
-        <a href="#" class="btn products"><img src="shop.ico" alt="Shop"> Products</a>
-        <a href="#" class="btn discord"><img src="discord.ico" alt="Discord"> Discord</a>
+  <div class="homepage-container">
+    <div class="homepage">
+      <div class="intro">
+        <div class="built-by-tag">Built by pros, for pros</div>
+        <h1>Unlock premium services with PenguinStore</h1>
+        <p class="description">PenguinStore is the go-to for cheap Discord services</p>
+        <ul class="features">
+          <li>Services for Discord</li>
+          <li>Instant delivery & management</li>
+          <li>Safe, fast, and updated regularly</li>
+          <li>We accept various payments!</li>
+        </ul>
       </div>
-    </section>
-  </main>
+      <div class="product-showcase" id="productShowcase">
+        <!-- Product images will be dynamically inserted via JavaScript -->
+      </div>
+    </div>
+  </div>
   <canvas id="particleCanvas"></canvas>
   <script>
     const canvas = document.getElementById('particleCanvas');
@@ -46,15 +55,14 @@
     class Particle {
       constructor() {
         this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
+        this.y = Math.random() * -canvas.height; // Start above canvas
         this.size = Math.random() * 3 + 1;
-        this.speedY = Math.random() * 0.5 + 0.1; // Slow fall
+        this.speedY = Math.random() * 0.3 + 0.1; // Slow fall
         this.color = 'rgba(128, 0, 128, 0.8)'; // Purple with transparency
       }
       update() {
         this.y += this.speedY;
-        if (this.y > canvas.height) this.y = 0; // Loop back to top
-        if (this.size > 0.2) this.size -= 0.01;
+        if (this.y > canvas.height) this.y = Math.random() * -canvas.height; // Loop back to top
       }
       draw() {
         ctx.fillStyle = this.color;
@@ -89,6 +97,22 @@
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
+
+    // Simple product showcase (placeholder)
+    const productShowcase = document.getElementById('productShowcase');
+    if (productShowcase) {
+      const products = [
+        { image: 'placeholder1.jpg', name: 'Product 1' },
+        { image: 'placeholder2.jpg', name: 'Product 2' },
+        { image: 'placeholder3.jpg', name: 'Product 3' }
+      ];
+      products.forEach(product => {
+        const div = document.createElement('div');
+        div.className = 'product-item';
+        div.innerHTML = `<img src="${product.image}" alt="${product.name}">`;
+        productShowcase.appendChild(div);
+      });
+    }
   </script>
 </body>
 </html>
